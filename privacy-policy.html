@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – DealsRadar</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0d0f0e;
+      --surface: #141816;
+      --border: #1f2420;
+      --accent: #4ade80;
+      --accent2: #86efac;
+      --text: #e8ede9;
+      --muted: #7a8c7c;
+      --heading-font: 'DM Serif Display', serif;
+      --body-font: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body-font);
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* Subtle grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,222,128,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,222,128,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 64px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .brand-name {
+      font-family: var(--heading-font);
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-family: var(--heading-font);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .meta span {
+      color: var(--accent2);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 48px;
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    section:nth-child(1)  { animation-delay: 0.05s; }
+    section:nth-child(2)  { animation-delay: 0.10s; }
+    section:nth-child(3)  { animation-delay: 0.15s; }
+    section:nth-child(4)  { animation-delay: 0.20s; }
+    section:nth-child(5)  { animation-delay: 0.25s; }
+    section:nth-child(6)  { animation-delay: 0.30s; }
+    section:nth-child(7)  { animation-delay: 0.35s; }
+    section:nth-child(8)  { animation-delay: 0.40s; }
+    section:nth-child(9)  { animation-delay: 0.45s; }
+
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 1.3rem;
+      color: var(--accent2);
+      margin-bottom: 14px;
+    }
+
+    p { color: #b8c9ba; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+
+    ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: #b8c9ba;
+    }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--accent); }
+
+    /* Contact card */
+    .contact-card {
+      margin-top: 16px;
+      padding: 20px 24px;
+      background: rgba(74,222,128,0.05);
+      border: 1px solid rgba(74,222,128,0.15);
+      border-radius: 8px;
+    }
+
+    .contact-card p {
+      margin: 4px 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-label {
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px !important;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 64px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <span class="brand-name">DealsRadar</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: <span>March 26, 2026</span> &nbsp;·&nbsp; Effective immediately</p>
+  </header>
+
+  <section>
+    <h2>1. Introduction</h2>
+    <p>Welcome to <strong>DealsRadar</strong>, operated by <strong>Purushottam Shinde</strong> ("we", "us", or "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, including our Pinterest affiliate automation tools and deal-discovery platform at <a href="https://dealsradar.netlify.app">dealsradar.netlify.app</a>.</p>
+    <p>By using our services, you agree to the terms of this Privacy Policy.</p>
+  </section>
+
+  <section>
+    <h2>2. Information We Collect</h2>
+    <p>We may collect the following categories of information:</p>
+    <ul>
+      <li><strong>Account Information:</strong> Name, email address, and contact details you provide when signing up.</li>
+      <li><strong>Pinterest Data:</strong> When you connect your Pinterest account, we access your boards and pin data solely to post affiliate content on your behalf.</li>
+      <li><strong>Usage Data:</strong> Pages visited, features used, timestamps, and interaction logs.</li>
+      <li><strong>Device Information:</strong> Browser type, operating system, IP address, and device identifiers.</li>
+      <li><strong>Affiliate Data:</strong> Click data and commission tracking from vCommission and EarnKaro affiliate networks.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. How We Use Your Information</h2>
+    <p>We use collected information to:</p>
+    <ul>
+      <li>Operate and improve our deal-discovery and affiliate pinning services.</li>
+      <li>Post pins to Pinterest on your behalf using your authorised access tokens.</li>
+      <li>Generate and track affiliate links via vCommission Smart Links and EarnKaro.</li>
+      <li>Send important service notifications and updates.</li>
+      <li>Analyse usage patterns to improve performance and user experience.</li>
+      <li>Comply with legal obligations.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Pinterest API Usage</h2>
+    <p>Our application uses the <strong>Pinterest API</strong> to create and manage pins on your behalf. We adhere strictly to <a href="https://policy.pinterest.com/en/developer-guidelines" target="_blank">Pinterest's Developer Guidelines</a> and <a href="https://policy.pinterest.com/en/terms-of-service" target="_blank">Terms of Service</a>.</p>
+    <ul>
+      <li>We only request Pinterest permissions necessary for pin creation and board management.</li>
+      <li>Your Pinterest access token is stored securely and never shared with third parties.</li>
+      <li>We do not scrape, store, or resell Pinterest user data.</li>
+      <li>You can revoke Pinterest access at any time via your Pinterest account settings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Third-Party Services</h2>
+    <p>Our service integrates with the following third-party platforms. Each has its own Privacy Policy:</p>
+    <ul>
+      <li><a href="https://policy.pinterest.com/en/privacy-policy" target="_blank">Pinterest</a> — For pin publishing</li>
+      <li><a href="https://network.vcommission.com" target="_blank">vCommission</a> — For affiliate smart links</li>
+      <li><a href="https://earnkaro.com" target="_blank">EarnKaro</a> — For affiliate link generation</li>
+      <li><a href="https://www.netlify.com/privacy/" target="_blank">Netlify</a> — For website hosting</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Data Sharing &amp; Disclosure</h2>
+    <p>We do <strong>not</strong> sell, rent, or trade your personal information. We may share data only in these circumstances:</p>
+    <ul>
+      <li>With affiliate network partners (vCommission, EarnKaro) strictly for commission tracking.</li>
+      <li>When required by law, court order, or government authority.</li>
+      <li>To protect the rights, property, or safety of DealsRadar, our users, or others.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Data Retention &amp; Security</h2>
+    <p>We retain your data only as long as necessary to provide our services or as required by law. We implement industry-standard security measures including encrypted storage of access tokens and secure HTTPS connections.</p>
+    <p>However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security but are committed to protecting your information.</p>
+  </section>
+
+  <section>
+    <h2>8. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you.</li>
+      <li>Request correction or deletion of your data.</li>
+      <li>Withdraw consent for Pinterest access at any time.</li>
+      <li>Opt out of non-essential communications.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us using the details below.</p>
+  </section>
+
+  <section>
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of our services after changes constitutes acceptance of the revised policy.</p>
+  </section>
+
+  <section>
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+    <div class="contact-card">
+      <p class="contact-label">Contact Details</p>
+      <p><strong>Name:</strong> Purushottam Shinde</p>
+      <p><strong>Company:</strong> DealsRadar</p>
+      <p><strong>Email:</strong> <a href="mailto:shindepurushottam7460@gmail.com">shindepurushottam7460@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 91091 36343741</p>
+      <p><strong>Website:</strong> <a href="https://dealsradar.netlify.app" target="_blank">dealsradar.netlify.app</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 DealsRadar by Purushottam Shinde. All rights reserved.</p>
+    <p style="margin-top:8px;">This policy is compliant with Pinterest Developer Guidelines &amp; applicable Indian data protection standards.</p>
+  </footer>
+
+</div>
+</body>
+</html>
